@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8084/pilgubAdmin/PilgubWebService?wsdl" uri="src/conf/xml-resources/web-service-references/PilgubWebService/wsdl/localhost_8084/pilgubAdmin/PilgubWebService.wsdl"/>
+    <system systemId="http://localhost:8084/pilgubAdmin/PilgubWebService?xsd=1" uri="src/conf/xml-resources/web-service-references/PilgubWebService/wsdl/localhost_8084/pilgubAdmin/PilgubWebService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8084/pilgubAdmin/pilgubWebService?wsdl" uri="src/conf/xml-resources/web-service-references/pilgubWebService/wsdl/localhost_8084/pilgubAdmin/pilgubWebService.wsdl"/>
+    <system systemId="http://localhost:8084/pilgubAdmin/pilgubWebService?xsd=1" uri="src/conf/xml-resources/web-service-references/pilgubWebService/wsdl/localhost_8084/pilgubAdmin/pilgubWebService.xsd_1.xsd"/>
+</catalog>

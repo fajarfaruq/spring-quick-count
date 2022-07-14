@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+  <persistence-unit name="pilgub013PU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>Model.TbHakakses</class>
+    <class>Model.TbLogin</class>
+    <class>Model.TbSuaratidaksahkelurahan</class>
+    <class>Model.TbSuaratidaksahtps</class>
+    <class>Model.TbTps</class>
+    <class>Model.TbKelurahan</class>
+    <class>Model.TbSuarasahkelurahan</class>
+    <class>Model.TbKecamatan</class>
+    <class>Model.TbSuarasahtps</class>
+    <class>Model.TbSuarasahkecamatan</class>
+    <class>Model.TbSuaratidaksahkecamatan</class>
+    <class>Model.TbPasangancalon</class>
+    <class>Model.Tampilkelurahan</class>
+    <class>Model.Tampitps</class>
+    <class>Model.Tampiltps</class>
+    <class>Model.Tampilsuaratps</class>
+    <class>Model.Tampilsuaratpsdetail</class>
+    <class>Model.TbLoginkelurahan</class>
+    <class>Model.TbLoginhelpdesk</class>
+    <class>Model.TbLogintps</class>
+    <class>Model.TbLoginkecamatan</class>
+    <class>Model.TbLoginadmin</class>
+    <class>Model.Tampilsuarakelurahan</class>
+    <class>Model.Tampilsuarakelurahandetail</class>
+    <class>Model.Tampilsuarakecamatan</class>
+    <class>Model.Tampildetailsuarakecamatan</class>
+    <class>Model.Tampilsuarakecamatandetail</class>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/db_pilgub013?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.password" value="user"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+    </properties>
+  </persistence-unit>
+</persistence>

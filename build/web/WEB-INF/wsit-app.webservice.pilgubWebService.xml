@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+ <definitions 
+ xmlns="http://schemas.xmlsoap.org/wsdl/" 
+ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+ xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="pilgubWebService" targetNamespace="http://webservice.app/" xmlns:tns="http://webservice.app/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsoma="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsrm="http://docs.oasis-open.org/ws-rx/wsrmp/200702" xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" xmlns:sc="http://schemas.sun.com/2006/03/wss/server" xmlns:wspp="http://java.sun.com/xml/ns/wsit/policy" 
+ >
+    <message name="LoginUser"/>
+    <message name="LoginUserResponse"/>
+    <message name="tambahsuaratps"/>
+    <message name="tambahsuaratpsResponse"/>
+    <message name="updatesuarasah"/>
+    <message name="updatesuarasahResponse"/>
+    <message name="getkodekecamatan"/>
+    <message name="getkodekecamatanResponse"/>
+    <message name="cetakdatagrafikcalon"/>
+    <message name="cetakdatagrafikcalonResponse"/>
+    <message name="datacetak"/>
+    <message name="datacetakResponse"/>
+    <message name="totaldpt"/>
+    <message name="totaldptResponse"/>
+    <message name="totalsuarasah"/>
+    <message name="totalsuarasahResponse"/>
+    <message name="totalsuaratidaksah"/>
+    <message name="totalsuaratidaksahResponse"/>
+    <message name="getnamakecamatan"/>
+    <message name="getnamakecamatanResponse"/>
+    <message name="jumlahDPTkecamatan"/>
+    <message name="jumlahDPTkecamatanResponse"/>
+    <message name="getkodekelurahan"/>
+    <message name="getkodekelurahanResponse"/>
+    <message name="tambahrekapitulasikelurahan"/>
+    <message name="tambahrekapitulasikelurahanResponse"/>
+    <message name="updaterekapitulasikelurahan"/>
+    <message name="updaterekapitulasikelurahanResponse"/>
+    <message name="hapusrekapitulasikelurahan"/>
+    <message name="hapusrekapitulasikelurahanResponse"/>
+    <message name="tambahrekapitulasikecamatan"/>
+    <message name="tambahrekapitulasikecamatanResponse"/>
+    <message name="updaterekapitulasikecamatan"/>
+    <message name="updaterekapitulasikecamatanResponse"/>
+    <message name="hapussuaratps"/>
+    <message name="hapussuaratpsResponse"/>
+    <message name="hapusrekapitulasikecamatan"/>
+    <message name="hapusrekapitulasikecamatanResponse"/>
+    <message name="totalsuarasahrekapitulasi"/>
+    <message name="totalsuarasahrekapitulasiResponse"/>
+    <message name="totalsuaratidaksahrekapitulasi"/>
+    <message name="totalsuaratidaksahrekapitulasiResponse"/>
+    <message name="getkodetps"/>
+    <message name="getkodetpsResponse"/>
+    <message name="getkodetps_kodekelurahan"/>
+    <message name="getkodetps_kodekelurahanResponse"/>
+    <message name="getkodetps_nomortps"/>
+    <message name="getkodetps_nomortpsResponse"/>
+    <message name="tambahsuarasah"/>
+    <message name="tambahsuarasahResponse"/>
+    <message name="tambahsuaratidaksah"/>
+    <message name="tambahsuaratidaksahResponse"/>
+    <message name="updatesuaratidaksah"/>
+    <message name="updatesuaratidaksahResponse"/>
+    <message name="hapussuarasahtps"/>
+    <message name="hapussuarasahtpsResponse"/>
+    <message name="hapussuaratidaksahtps"/>
+    <message name="hapussuaratidaksahtpsResponse"/>
+    <message name="getsuaratidaksah"/>
+    <message name="getsuaratidaksahResponse"/>
+    <message name="updaterekapitulasikelurahan_suarasah"/>
+    <message name="updaterekapitulasikelurahan_suarasahResponse"/>
+    <message name="updaterekapitulasikelurahan_suaratidaksah"/>
+    <message name="updaterekapitulasikelurahan_suaratidaksahResponse"/>
+    <message name="tambahrekapitulasikelurahan_suarasah"/>
+    <message name="tambahrekapitulasikelurahan_suarasahResponse"/>
+    <message name="tambahrekapitulasikelurahan_suaratidaksah"/>
+    <message name="tambahrekapitulasikelurahan_suaratidaksahResponse"/>
+    <message name="printrekapitulasikelurahan"/>
+    <message name="printrekapitulasikelurahanResponse"/>
+    <message name="jumlahDPTkelurahan"/>
+    <message name="jumlahDPTkelurahanResponse"/>
+    <message name="jumlahSuarasahkelurahan"/>
+    <message name="jumlahSuarasahkelurahanResponse"/>
+    <message name="jumlahSuaratidaksahkelurahan"/>
+    <message name="jumlahSuaratidaksahkelurahanResponse"/>
+    <message name="generatesuarakecamatan"/>
+    <message name="generatesuarakecamatanResponse"/>
+    <message name="printrekapitulasikecamatan"/>
+    <message name="printrekapitulasikecamatanResponse"/>
+    <message name="jumlahSuarasahkecamatan"/>
+    <message name="jumlahSuarasahkecamatanResponse"/>
+    <message name="jumlahSuaratidaksahkecamatan"/>
+    <message name="jumlahSuaratidaksahkecamatanResponse"/>
+    <message name="cekkevalidtandata"/>
+    <message name="cekkevalidtandataResponse"/>
+    <portType name="pilgubWebService">
+        <operation name="LoginUser">
+            <input message="tns:LoginUser"/>
+            <output message="tns:LoginUserResponse"/>
+        </operation>
+        <operation name="tambahsuaratps">
+            <input message="tns:tambahsuaratps"/>
+            <output message="tns:tambahsuaratpsResponse"/>
+        </operation>
+        <operation name="updatesuarasah">
+            <input message="tns:updatesuarasah"/>
+            <output message="tns:updatesuarasahResponse"/>
+        </operation>
+        <operation name="getkodekecamatan">
+            <input message="tns:getkodekecamatan"/>
+            <output message="tns:getkodekecamatanResponse"/>
+        </operation>
+        <operation name="cetakdatagrafikcalon">
+            <input message="tns:cetakdatagrafikcalon"/>
+            <output message="tns:cetakdatagrafikcalonResponse"/>
+        </operation>
+        <operation name="datacetak">
+            <input message="tns:datacetak"/>
+            <output message="tns:datacetakResponse"/>
+        </operation>
+        <operation name="totaldpt">
+            <input message="tns:totaldpt"/>
+            <output message="tns:totaldptResponse"/>
+        </operation>
+        <operation name="totalsuarasah">
+            <input message="tns:totalsuarasah"/>
+            <output message="tns:totalsuarasahResponse"/>
+        </operation>
+        <operation name="totalsuaratidaksah">
+            <input message="tns:totalsuaratidaksah"/>
+            <output message="tns:totalsuaratidaksahResponse"/>
+        </operation>
+        <operation name="getnamakecamatan">
+            <input message="tns:getnamakecamatan"/>
+            <output message="tns:getnamakecamatanResponse"/>
+        </operation>
+        <operation name="jumlahDPTkecamatan">
+            <input message="tns:jumlahDPTkecamatan"/>
+            <output message="tns:jumlahDPTkecamatanResponse"/>
+        </operation>
+        <operation name="getkodekelurahan">
+            <input message="tns:getkodekelurahan"/>
+            <output message="tns:getkodekelurahanResponse"/>
+        </operation>
+        <operation name="tambahrekapitulasikelurahan">
+            <input message="tns:tambahrekapitulasikelurahan"/>
+            <output message="tns:tambahrekapitulasikelurahanResponse"/>
+        </operation>
+        <operation name="updaterekapitulasikelurahan">
+            <input message="tns:updaterekapitulasikelurahan"/>
+            <output message="tns:updaterekapitulasikelurahanResponse"/>
+        </operation>
+        <operation name="hapusrekapitulasikelurahan">
+            <input message="tns:hapusrekapitulasikelurahan"/>
+            <output message="tns:hapusrekapitulasikelurahanResponse"/>
+        </operation>
+        <operation name="tambahrekapitulasikecamatan">
+            <input message="tns:tambahrekapitulasikecamatan"/>
+            <output message="tns:tambahrekapitulasikecamatanResponse"/>
+        </operation>
+        <operation name="updaterekapitulasikecamatan">
+            <input message="tns:updaterekapitulasikecamatan"/>
+            <output message="tns:updaterekapitulasikecamatanResponse"/>
+        </operation>
+        <operation name="hapussuaratps">
+            <input message="tns:hapussuaratps"/>
+            <output message="tns:hapussuaratpsResponse"/>
+        </operation>
+        <operation name="hapusrekapitulasikecamatan">
+            <input message="tns:hapusrekapitulasikecamatan"/>
+            <output message="tns:hapusrekapitulasikecamatanResponse"/>
+        </operation>
+        <operation name="totalsuarasahrekapitulasi">
+            <input message="tns:totalsuarasahrekapitulasi"/>
+            <output message="tns:totalsuarasahrekapitulasiResponse"/>
+        </operation>
+        <operation name="totalsuaratidaksahrekapitulasi">
+            <input message="tns:totalsuaratidaksahrekapitulasi"/>
+            <output message="tns:totalsuaratidaksahrekapitulasiResponse"/>
+        </operation>
+        <operation name="getkodetps">
+            <input message="tns:getkodetps"/>
+            <output message="tns:getkodetpsResponse"/>
+        </operation>
+        <operation name="getkodetps_kodekelurahan">
+            <input message="tns:getkodetps_kodekelurahan"/>
+            <output message="tns:getkodetps_kodekelurahanResponse"/>
+        </operation>
+        <operation name="getkodetps_nomortps">
+            <input message="tns:getkodetps_nomortps"/>
+            <output message="tns:getkodetps_nomortpsResponse"/>
+        </operation>
+        <operation name="tambahsuarasah">
+            <input message="tns:tambahsuarasah"/>
+            <output message="tns:tambahsuarasahResponse"/>
+        </operation>
+        <operation name="tambahsuaratidaksah">
+            <input message="tns:tambahsuaratidaksah"/>
+            <output message="tns:tambahsuaratidaksahResponse"/>
+        </operation>
+        <operation name="updatesuaratidaksah">
+            <input message="tns:updatesuaratidaksah"/>
+            <output message="tns:updatesuaratidaksahResponse"/>
+        </operation>
+        <operation name="hapussuarasahtps">
+            <input message="tns:hapussuarasahtps"/>
+            <output message="tns:hapussuarasahtpsResponse"/>
+        </operation>
+        <operation name="hapussuaratidaksahtps">
+            <input message="tns:hapussuaratidaksahtps"/>
+            <output message="tns:hapussuaratidaksahtpsResponse"/>
+        </operation>
+        <operation name="getsuaratidaksah">
+            <input message="tns:getsuaratidaksah"/>
+            <output message="tns:getsuaratidaksahResponse"/>
+        </operation>
+        <operation name="updaterekapitulasikelurahan_suarasah">
+            <input message="tns:updaterekapitulasikelurahan_suarasah"/>
+            <output message="tns:updaterekapitulasikelurahan_suarasahResponse"/>
+        </operation>
+        <operation name="updaterekapitulasikelurahan_suaratidaksah">
+            <input message="tns:updaterekapitulasikelurahan_suaratidaksah"/>
+            <output message="tns:updaterekapitulasikelurahan_suaratidaksahResponse"/>
+        </operation>
+        <operation name="tambahrekapitulasikelurahan_suarasah">
+            <input message="tns:tambahrekapitulasikelurahan_suarasah"/>
+            <output message="tns:tambahrekapitulasikelurahan_suarasahResponse"/>
+        </operation>
+        <operation name="tambahrekapitulasikelurahan_suaratidaksah">
+            <input message="tns:tambahrekapitulasikelurahan_suaratidaksah"/>
+            <output message="tns:tambahrekapitulasikelurahan_suaratidaksahResponse"/>
+        </operation>
+        <operation name="printrekapitulasikelurahan">
+            <input message="tns:printrekapitulasikelurahan"/>
+            <output message="tns:printrekapitulasikelurahanResponse"/>
+        </operation>
+        <operation name="jumlahDPTkelurahan">
+            <input message="tns:jumlahDPTkelurahan"/>
+            <output message="tns:jumlahDPTkelurahanResponse"/>
+        </operation>
+        <operation name="jumlahSuarasahkelurahan">
+            <input message="tns:jumlahSuarasahkelurahan"/>
+            <output message="tns:jumlahSuarasahkelurahanResponse"/>
+        </operation>
+        <operation name="jumlahSuaratidaksahkelurahan">
+            <input message="tns:jumlahSuaratidaksahkelurahan"/>
+            <output message="tns:jumlahSuaratidaksahkelurahanResponse"/>
+        </operation>
+        <operation name="generatesuarakecamatan">
+            <input message="tns:generatesuarakecamatan"/>
+            <output message="tns:generatesuarakecamatanResponse"/>
+        </operation>
+        <operation name="printrekapitulasikecamatan">
+            <input message="tns:printrekapitulasikecamatan"/>
+            <output message="tns:printrekapitulasikecamatanResponse"/>
+        </operation>
+        <operation name="jumlahSuarasahkecamatan">
+            <input message="tns:jumlahSuarasahkecamatan"/>
+            <output message="tns:jumlahSuarasahkecamatanResponse"/>
+        </operation>
+        <operation name="jumlahSuaratidaksahkecamatan">
+            <input message="tns:jumlahSuaratidaksahkecamatan"/>
+            <output message="tns:jumlahSuaratidaksahkecamatanResponse"/>
+        </operation>
+        <operation name="cekkevalidtandata">
+            <input message="tns:cekkevalidtandata"/>
+            <output message="tns:cekkevalidtandataResponse"/>
+        </operation>
+    </portType>
+    <binding name="pilgubWebServicePortBinding" type="tns:pilgubWebService">
+        <operation name="LoginUser">
+            <input></input>
+            <output></output>
+        </operation>
+        <operation name="tambahsuaratps">
+            <input></input>
+            <output></output>
+        </operation>
+        <operation name="updatesuarasah">
+            <input></input>
+            <output></output>
+        </operation>
+        <operation name="getkodekecamatan">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="cetakdatagrafikcalon">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="datacetak">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="totaldpt">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="totalsuarasah">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="totalsuaratidaksah">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="getnamakecamatan">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="jumlahDPTkecamatan">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="getkodekelurahan">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="tambahrekapitulasikelurahan">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="updaterekapitulasikelurahan">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="hapusrekapitulasikelurahan">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="tambahrekapitulasikecamatan">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="updaterekapitulasikecamatan">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="hapussuaratps">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="hapusrekapitulasikecamatan">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="totalsuarasahrekapitulasi">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="totalsuaratidaksahrekapitulasi">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="getkodetps">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="getkodetps_kodekelurahan">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="getkodetps_nomortps">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="tambahsuarasah">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="tambahsuaratidaksah">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="updatesuaratidaksah">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="hapussuarasahtps">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="hapussuaratidaksahtps">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="getsuaratidaksah">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="updaterekapitulasikelurahan_suarasah">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="updaterekapitulasikelurahan_suaratidaksah">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="tambahrekapitulasikelurahan_suarasah">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="tambahrekapitulasikelurahan_suaratidaksah">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="printrekapitulasikelurahan">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="jumlahDPTkelurahan">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="jumlahSuarasahkelurahan">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="jumlahSuaratidaksahkelurahan">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="generatesuarakecamatan">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="printrekapitulasikecamatan">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="jumlahSuarasahkecamatan">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="jumlahSuaratidaksahkecamatan">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="cekkevalidtandata">
+            <input/>
+            <output/>
+        </operation>
+    </binding>
+    <service name="pilgubWebService">
+        <port name="pilgubWebServicePort" binding="tns:pilgubWebServicePortBinding"/>
+    </service>
+    <wsp:Policy wsu:Id="pilgubWebServicePortBinding_getkodekecamatan_Input_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="pilgubWebServicePortBinding_getkodekecamatan_Output_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="pilgubWebServicePortBinding_hapussuaratps_Input_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="pilgubWebServicePortBinding_hapussuaratps_Output_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="pilgubWebServicePortBinding_getkodetps_kodekelurahan_Input_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="pilgubWebServicePortBinding_getkodetps_kodekelurahan_Output_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="pilgubWebServicePortBinding_updatesuaratidaksah_Input_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="pilgubWebServicePortBinding_updatesuaratidaksah_Output_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="pilgubWebServicePortBinding_generatesuarakecamatan_Input_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="pilgubWebServicePortBinding_generatesuarakecamatan_Output_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+</definitions>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/db_pilgub013</property>
+    <property name="hibernate.connection.username">pilgub013</property>
+    <property name="hibernate.connection.password">pilgub013admin</property>
+    
+    <property name="transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
+    
+    <property name="current_session_context_class">thread</property>
+
+    <property name="hibernate.show_sql">true</property>
+
+    <!-- <property name="hibernate.hbm2ddl.auto">create</property> -->
+
+    <mapping class="Model.TbLoginadmin" />
+    <mapping class="Model.TbLoginkecamatan" />
+    <mapping class="Model.TbLoginkelurahan" />
+    <mapping class="Model.TbLogintps" />
+    <mapping class="Model.TbLoginhelpdesk" />
+    <mapping class="Model.TbKecamatan" />
+    <mapping class="Model.TbKelurahan" />
+    <mapping class="Model.TbPasangancalon" />    
+    <mapping class="Model.TbSuarasahkecamatan" />    
+    <mapping class="Model.TbSuarasahkelurahan" />    
+    <mapping class="Model.TbSuarasahtps" />    
+    <mapping class="Model.TbSuaratidaksahkecamatan" />
+    <mapping class="Model.TbSuaratidaksahkelurahan" /> 
+    <mapping class="Model.TbSuaratidaksahtps" />
+    <mapping class="Model.TbTps" />
+    <!-- VIEW -->
+    <mapping class="Model.Tampilkelurahan" />
+    <mapping class="Model.Tampiltps" />
+    <mapping class="Model.Tampilsuaratps" />
+    <mapping class="Model.Tampilsuaratpsdetail" />
+    <mapping class="Model.Tampilsuarakelurahan" />
+    <mapping class="Model.Tampilsuarakelurahandetail" />
+    <mapping class="Model.Tampilsuarakecamatan" />
+    <mapping class="Model.Tampilsuarakecamatandetail" />
+
+  </session-factory>
+</hibernate-configuration>
